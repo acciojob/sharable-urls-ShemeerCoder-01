@@ -3,7 +3,7 @@ var url ='https://localhost:8080/';
 var btn = document.getElementById("button");
 btn.addEventListener('click',fetchData);
 
-function fetchData(){
+function fetchData(event){
 	var nameData = document.getElementById("name");
 	var nameAttr = nameData.getAttribute("name");
 	var yearData = document.getElementById("year");
@@ -18,7 +18,7 @@ function fetchData(){
 		document.querySelector("#url").innerHTML = str;
 	}
 	
-	
+	event.preventDefault()
 	// alert(url);
 	
 	
